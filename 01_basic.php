@@ -214,12 +214,30 @@ $smart_maths = 7 / 0;
       background: none;
     }
 
+    .auaa {
+      text-align: center;
+    }
+
     .coconut {
       text-align: right;
     }
   </style>
 </head>
 <body>
+
+<h2>Pour réussir:</h2>
+<ul>
+  <li>Afficher le texte « Hello World » sur cette page, en utilisant $variable</li>
+  <li>Utiliser les styles pour afficher le texte en rouge, centré</li>
+  <li>Corriger les bugs empêchant de charger la page</li>
+</ul>
+
+<h2>Bonus</h2>
+<ul>
+  <li>Mettre en italique le contenu des paragraphes, sur fond coloré</li>
+  <li>Corriger les proportions de l'image</li>
+</ul>
+
 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
   eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
   voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
@@ -230,11 +248,11 @@ $smart_maths = 7 / 0;
   vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
 
 <img src="http://lorempixel.com/400/200/sports/1/Corrigez-moi/" height="400" width="200"/>
-<div class="s1">
+<h1 class="s1">
   <?php
   echo 'Hello $variable';
   ?>
-</div>
+</h1>
 <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
   corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
   officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
