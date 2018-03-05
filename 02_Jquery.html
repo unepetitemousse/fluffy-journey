@@ -1,0 +1,47 @@
+<!-- https://jsfiddle.net/xoxsoxrv/4/ -->
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/trontastic/jquery-ui.css"/>
+</head>
+<body>
+
+<h1>Basic Jquery</h1>
+<pre>
+   But:
+    - Prouver sa connaissance même basique de Jquery
+
+    Pour réussir ce module:
+    - Afficher dans la console (console.log()) un texte lorsqu'on clique sur un bouton
+    - Rendre le bouton « Show paragraph » effectif
+
+    Bonus:
+    - Animer la disparition d'un paragraph.
+</pre>
+
+<p>
+  Paragraph 1
+</p>
+
+<p>
+  Paragraph 2
+</p>
+
+<button id="hide">
+  Hide Paragraph
+</button>
+<button id="show">
+  Show Paragraph
+</button>
+
+<script>
+    $('button').button().on('click', function () {
+        $('p').hide();
+    });
+
+    // .show();
+    // see: http://api.jquery.com/show/
+</script>
+</body>
+</html>

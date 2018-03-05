@@ -1,0 +1,59 @@
+<html>
+<head>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</head>
+<body>
+
+<h1>Testing SQL</h1>
+
+<p>Below code intends to be run on <a href="http://sqlfiddle.com/">SqlFiddle.com</a>, and should be available in <a
+    href="http://sqlfiddle.com/#!9/601e43">this page</a></p>
+
+<h2>Left tab (schema)</h2>
+<pre style="width: 40%;"><code class="sql">
+
+-- Simple ability test for basic SQL
+
+CREATE TABLE IF NOT EXISTS `docs` (
+  `id` int(6) unsigned NOT NULL,
+  `rev` int(3) unsigned NOT NULL,
+  `content` varchar(200) NOT NULL,
+  `value` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) DEFAULT CHARSET=utf8;
+INSERT INTO `docs` (`id`, `rev`, `content`, `value`) VALUES
+  ('1', '1', 'The earth is flat', 100),
+  ('2', '1', 'One hundred angels can dance on the head of a pin', 12),
+  ('3', '2', 'The earth is flat and rests on a bull\'s horn', 15),
+  ('4', '3', 'The earth is like a ball.', 17),
+  ('5', '1', 'This is an interresting statement', 12),
+  ('6', '2', 'Comme dans un film', 15),
+  ('7', '3', 'I like bananas.', 17);
+
+-- Insert a new row, that is
+-- ID=10, REV=3, CONTENT="Flappy Bird", VALUE=999
+-- Hint: INSERT INTO ... VALUES
+
+-- Update last insertion, add 1 to VALUE
+-- Hint: UPDATE ... WHERE ...
+</code></pre>
+
+<h2>Right tab (exec)</h2>
+<pre style="width:40%"><code class="sql">
+select * from docs;
+
+-- Please select content for ID=5
+-- Hint: WHERE
+
+-- Please sum all values for rows where rev=1
+-- Hint: SUM()
+
+-- Please count all items by rev value
+-- Hint: GROUP BY
+</code></pre>
+
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
