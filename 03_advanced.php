@@ -27,6 +27,13 @@
     function getName();
   }
 
+  /**
+   * Class Human
+   *
+   * A very complex yet very functional class that uses a webservice in order to provide randomized content.
+   *
+   * You should not bother much about this class.
+   */
   class Human implements LifeForm
   {
     /** @var object User representation as returned by RandomUser.me */
@@ -48,6 +55,13 @@
     }
   }
 
+  /**
+   * Class Wolf
+   *
+   * A Wolf is a wild form of life, and its definition may not match PHP processor expectation.
+   *
+   * I'd double check this class, if I were you.
+   */
   class Wolf implements LifeForm
   {
     function getLifeExpectancy()
@@ -56,6 +70,12 @@
     }
   }
 
+  /**
+   * Class Dog
+   *
+   * Some kind of domestic variant of a canine lifeform, that have a name randomized from the content of a very
+   * short array.
+   */
   class Dog extends Wolf
   {
     function __construct()
@@ -78,6 +98,7 @@
     }
   }
 
+  /** @var LifeForm[] $subjects */
   $subjects = [
     new Dog(),
     new Dog(),
@@ -113,20 +134,36 @@
   </style>
 </head>
   <body>
-  <table>
-    <thead>
-      <th>Type</th>
-      <th>Name</th>
-      <th>Life Expectancy</th>
-    </thead>
-  <tbody>
-    <?php foreach($subjects as $subject): ?>
-      <tr class="subject">
-        <td><?php echo get_class($subject); ?></td>
-        <td></td>
-        <td><?php echo $subject->getLifeExpectancy(); ?></td>
-      </tr>
-    <?php endforeach; ?>
-  </tbody>
+    <h1>Advanced test</h1>
+    <h2>Goal</h2>
+    <ul>
+      <li>Show your understanding of written English</li>
+      <li>Object Oriented Programing, and inheritance</li>
+    </ul>
+
+    <h2>In order to succeed</h2>
+    <ul>
+      <li>Sort issue with Wolf class, a wolf may have no name, indeed.</li>
+      <li>Fix the loop, there may be unexpected content (bonus if you can ignore the error)</li>
+      <li>Use proper CSS class on each table row</li>
+      <li>Display the Subject name in the loop</li>
+    </ul>
+
+    <table>
+      <thead>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Life Expectancy</th>
+      </thead>
+      <tbody>
+        <?php foreach($subjects as $subject): ?>
+          <tr class="subject">
+            <td><?php echo get_class($subject); ?></td>
+            <td><!-- Oops, someone forgot to insert the NAME value. --></td>
+            <td><?php echo $subject->getLifeExpectancy(); ?></td>
+          </tr>
+        <?php endforeach; ?>
+      </tbody>
+    </table>
   </body>
 </html>
