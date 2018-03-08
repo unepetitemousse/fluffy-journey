@@ -20,7 +20,16 @@
  */
 
 $variable = "World"
-$smart_maths = 7 / 0;
+
+// I say stuff in the source code.
+$author = "Robert Mc Dugann";
+/*
+ * Comments are so useful !
+ *
+ * I like to eat bananas.
+ * I feel so sad seeing such a long source code.
+ */
+$param = $_GET['superparameter'];
 ?>
 <html>
 <head>
